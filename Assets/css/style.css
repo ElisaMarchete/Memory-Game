@@ -1,0 +1,173 @@
+:root {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,17,60,1) 50%, rgba(2,0,36,1) 100%);
+    --btnColor: #DB504A;
+    --btnText: #000;
+}
+
+@keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    text-align: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    font-size: 2.8rem;
+    color: #60D394;
+    margin-bottom: 3rem;
+    animation: bounce-in 3s ease;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.playBtn {
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    font-size: 1rem;
+    padding: 0.2rem 0;
+    width: 4.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    background-color: var(--btnColor);
+    color: var(--btnText);
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.playBtn:hover {
+    box-shadow: 0 0.1rem 0.1rem 0 #000000;
+    transition: transform 125ms;
+    transform: scale(1.05);
+}
+
+.scoreBtn {
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    font-size: 1.5rem;
+    padding: 0.2rem 0;
+    width: 10.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+    background-color: var(--btnColor);
+    color: var(--btnText);
+    border-radius: 10px;
+
+    animation: bounce-in 3s ease;
+}
+
+.scoreBtn:hover {
+    box-shadow: 0 0.1rem 0.1rem 0 #000000;
+    transition: transform 125ms;
+    transform: scale(1.05);
+}
+
+#easy {
+    opacity: 1;
+    animation: bounce-in 4s ease;
+}
+
+#medium {
+    opacity: 1;
+    animation: bounce-in 3.5s ease;
+}
+
+#hard {
+    opacity: 1;
+    animation: bounce-in 4s ease;
+}
+
+@media screen and (max-width: 769px) {
+
+#easy {
+    font-size: 1.1rem;
+}
+
+#medium {
+    font-size: 1.1rem;
+}
+
+#hard {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .playBtn{
+        font-size: 1.0rem;
+    }
+
+    .scoreBtn{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    h1{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .playBtn{
+        font-size: 0.6rem;
+        width: 3rem;
+    }
+
+    .scoreBtn{
+        font-size: 1rem;
+        width: 5rem;
+    }
+
+    #medium {
+        font-size: 1rem;
+        width: 4rem;
+        }
+}

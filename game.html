@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./Assets/css/reset.css" />
+    <link rel="stylesheet" href="./Assets/css/style_Reviewcards.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Chivo+Mono"
+    />
+    <link rel="icon" type="image/png" href="./Assets/image/favicon.png">
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <audio id="audio" src="./Assets/music/Ice & Fire - King Canyon.mp3"></audio>
+        <div id="musicButtons">
+          <button id="playButton" class="playMusicButton">Play Music</button>
+          <button id="stopButton" class="stopPlayMusicButton">Stop Music</button>
+        </div>
+        
+        <div id="timer"></div>
+        
+      </header>
+      <div class="wrapper">
+        <div id="cards" class="mainCards"></div>
+        <aside>
+          <div class="score"></div>
+          <div id="joke" class="jokeClass"></div>
+        </aside>
+        </div>
+      
+      <div class="modal">
+        <div class="modal-background custom-modal-background"></div>
+        <div class="modal-content custom-modal">
+          <!-- Any other Bulma elements you want -->
+          <p class="is-size-3 has-text-centered has-text-white your-point pb-2"></p>
+          <div class="control　column is-11-mobile">
+            <input
+              class="input is-focused is-large has-text-centered custom-input"
+              type="text"
+              placeholder="Enter your Initials"
+              id = "inits";
+              />
+              <p class="help is-danger is-size-4" style="display: none;" id="error_message">Enter your initials!</p>
+              <div class="control is-justify-content-center is-align-items-center" style="display: flex;">
+                <button id = "submit" class="button is-primary is-medium">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="./Assets/javascript/script_Reviewcards.js"></script>
+    <script src="./Assets/javascript/highscores.js"></script>
+
+  </body>
+</html>

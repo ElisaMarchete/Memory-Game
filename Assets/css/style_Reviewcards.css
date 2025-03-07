@@ -1,0 +1,246 @@
+:root {
+    background: linear-gradient(90deg, rgba(0, 17, 60, 1) 0%, rgba(2, 0, 36, 1) 50%, rgba(0, 17, 60, 1) 100%);
+    --textColor: #FFFFFF;
+    --buttonColor: #DB504A;
+    --buttonText: #000;
+    --timerColor: #60D394;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    background-color: var(--buttonColor);
+    color: var(--buttonText);
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    padding: 4px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+button:hover {
+    box-shadow: 0 0.1rem 0.1rem 0 #131313;
+    transition: transform 125ms;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#timer {
+    color: var(--timerColor);
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 3%;
+}
+
+.card {
+    background-color: rgba(0, 17, 60, 1);
+    transform-style: preserve-3d;
+    transition: transform .3s;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    width: 250px;
+    height: 300px;
+}
+
+.card:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+.back-img {
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.custom-modal-background {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 17, 60, 1) 50%, rgba(2, 0, 36, 1) 100%);
+}
+
+aside {
+    color: white;
+    float: left;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 20%;
+    padding: 30px 20px;
+    height: 10%;
+    background-color: var(--buttonColor);
+    top: 0;
+    font-family: 'Chivo Mono', 'monospace', sans-serif;
+    font-size: 1.0rem;
+    border-radius: 10px;
+}
+
+.score {
+    background-color: #60D394;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.jokeClass {
+    padding-top: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*change this part if need to change media query for game */
+@media screen and (max-width: 2100px) {
+
+    .card,
+    .back-img {
+        width: 230px;
+        height: 275px;
+    }
+
+    .score {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+
+    .card,
+    .back-img {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #timer {
+        font-size: 1.8rem;
+    }
+
+    aside {
+        width: 15%;
+        padding: 5px 5px;
+        height: 10%;
+        background-color: var(--buttonColor);
+        top: 0;
+        font-family: 'Chivo Mono', 'monospace', sans-serif;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 658px) {
+
+    .card,
+    .back-img {
+        width: 150px;
+        height: 180px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .score {
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width: 509px) {
+    #cards {
+        padding: 0;
+    }
+
+    button {
+        margin: 0;
+    }
+
+    aside {
+        padding: 6px 4px;
+        height: 10%;
+        font-size: 0.5rem;
+    }
+
+    .card,
+    .back-img {
+        width: 70px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 403px) {
+
+    .card,
+    .back-img {
+        width: 110px;
+        height: 132px;
+    }
+
+    .jokeClass {
+        padding-top: 20px;
+
+    }
+
+    aside {
+        width: 15%;
+        padding: 5px 3px;
+        height: 10%;
+        font-size: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+
+    .card,
+    .back-img {
+        width: 70px;
+        height: 100px;
+    }
+
+    .jokeClass {
+        padding-top: 20px;
+
+    }
+
+    aside {
+        width: 15%;
+        padding: 5px 3px;
+        height: 10%;
+        font-size: 0.30rem;
+    }
+
+    .jokeClass {
+        padding-top: 10px;
+
+    }
+
+    .score {
+        font-size: 8px;
+    }
+}
