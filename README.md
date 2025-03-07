@@ -54,4 +54,4 @@ This game is licensed under the MIT License. See the LICENSE file for more detai
 ![Screenshot of deployed application](./Assets/screenshots/screenshot5.png)
 ![Screenshot of deployed application](./Assets/screenshots/screenshot6.png)
 ![Screenshot of deployed application](./Assets/screenshots/screenshot7.png)
-[Link deployed application](https://elisamarchete.github.io/Memory-Game/game.html)
+[Link deployed application](https://elisamarchete.github.io/Memory-Game)
